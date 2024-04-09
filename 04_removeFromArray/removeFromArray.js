@@ -1,10 +1,5 @@
 const removeFromArray = function(inputArray, ...valuesToRemove) {
-  function isInInputArray(value) {
-    for (element of valuesToRemove) {
-        if (value === element) return true;
-    }
-  }
-  return inputArray.filter((arrayElement) => !isInInputArray(arrayElement));
+  return inputArray.filter((arrayElement) => !valuesToRemove.includes(arrayElement));
 };
 
 // Do not edit below this line
